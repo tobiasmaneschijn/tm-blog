@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className='mx-auto max-w-2xl px-6 '>
+        <Header />
+        {children}
+        <Footer/>
+        </div>
+        </body>
     </html>
   )
 }
