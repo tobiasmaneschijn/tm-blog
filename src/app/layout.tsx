@@ -13,7 +13,6 @@ export const metadata = {
   category: 'blog',
   creator: "Tobias Maneschijn",
   publisher: "Tobias Maneschijn",
-  colorScheme: 'dark',
   robots: 'index, follow',
   keywords: 'blog, student, software, engineering, developer, developer blog, software engineer, software developer, typescript, react, javascript, nodejs, node',    
 }
