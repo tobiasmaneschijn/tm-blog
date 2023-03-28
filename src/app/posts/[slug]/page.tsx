@@ -25,8 +25,9 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
   const post = getPostContent(slug);
   return (
     <div className="">
-      <h1 className="text-2xl text-green-800" >{post.data.title}</h1>
-      <article className="prose prose-slate lg:prose-xl">
+      <h1 className="text-2xl font-bold text-green-800" >{post.data.title}</h1>
+      <p className="text-gray-500">{post.data.date}</p> 
+      <article className="prose prose-slate dark:prose-invert  lg:prose-xl">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>

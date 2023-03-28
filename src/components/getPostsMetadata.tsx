@@ -14,6 +14,8 @@ export const getPostsMetadata = (): PostMetaData[] => {
       title: matterResult.data.title,
       date: matterResult.data.date,
       subtitle: matterResult.data.subtitle,
+      image: matterResult.data.image,
+      author: matterResult.data.author,
       slug: post.replace(".md", ""),
     };
   });
