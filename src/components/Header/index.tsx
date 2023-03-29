@@ -20,8 +20,7 @@ const Header = () => {
     const { darkMode, toggle } = useTheme();
 
   return (
-    <header>
-      <div className="px-6 pt-6 pb-6 lg:px-8 dark:bg-slate-900">
+    <header  className=" px-6 pt-6 pb-6 lg:px-8 ">
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <div className="inline-flex gap-4">
@@ -106,7 +105,6 @@ const Header = () => {
             </div>
           </Dialog.Panel>
         </Dialog>
-      </div>
     </header>
   );
 };

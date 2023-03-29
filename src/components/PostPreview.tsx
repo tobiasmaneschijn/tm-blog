@@ -17,11 +17,11 @@ export const PostPreview: React.FC<{
           />
         </Link>
         <div className="p-5 flex flex-col">
-          <a href={href}>
+          <Link href={href}>
             <h5 className="text-gray-900 dark:text-white font-bold text-2xl tracking-tight mb-2">
               {post.title}
             </h5>
-          </a>
+          </Link>
           <p className="font-normal text-gray-700 dark:text-slate-200 mb-3"> {post.subtitle} </p>
         
         </div>

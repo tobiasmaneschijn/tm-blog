@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import PageWrapper from '@/components/PageWrapper'
 import './globals.css'
 
 
@@ -25,10 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className='dark:bg-slate-900 '>
+        <div className=' dark:bg-gradient-to-br dark:from-slate-900 dark:to-black bg-gradient-to-tr from-white to-green-50
+         '>
         <Header />
         <div className='flex flex-col min-h-screen mx-auto max-w-2xl px-6 py-6 '>
-        {children}
+          {children}
         </div>
         <Footer/>
         </div>

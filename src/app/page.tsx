@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 const inter = Inter({ subsets: ["latin"] });
 import { getPostsMetadata } from "@/components/getPostsMetadata";
 import { PostPreview } from "../components/PostPreview";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function Home() {
   const posts = getPostsMetadata();
@@ -14,5 +15,5 @@ export default function Home() {
     );
   });
 
-  return <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>;
+  return  <PageWrapper><div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div></PageWrapper>;
 }
