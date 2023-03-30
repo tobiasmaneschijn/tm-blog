@@ -2,6 +2,7 @@
 import { useTheme } from "@/hooks/useDarkMode";
 import { AnimatePresence, motion } from "framer-motion";
 import useDarkMode from "use-dark-mode";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 
 type PageWrapperProps = {
@@ -26,6 +27,7 @@ const PageWrapper = (
           damping: 20,
         }}
       >
+      <ScrollToTopButton/>
         {children}
       </motion.div>
       ;

@@ -72,6 +72,9 @@ const slideInFromLeft: Variants = {
 };
 
 const Modal = ({ handleClose, children }: ModalProps) => {
+
+    
+
   return (
     <Backdrop onClick={handleClose}>
       <motion.div

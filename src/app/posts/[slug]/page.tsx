@@ -3,6 +3,7 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import { getPostsMetadata } from "@/components/getPostsMetadata";
 import PageWrapper from "@/components/PageWrapper";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 type PostPageProps = {
   params: {
     slug: string;
