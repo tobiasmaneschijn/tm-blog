@@ -1,3 +1,4 @@
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageWrapper from "@/components/PageWrapper";
@@ -25,15 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-      
-      >
-        
-        <div   className=" dark:bg-slate-900 bg-white ">
+      <body className="min-h-screen bg-slate-900 dark:bg-slate-900">
+        <div className="min-h-screen  bg-white dark:bg-slate-900">
           <Header />
-          <div className="flex flex-col min-h-screen mx-auto max-w-2xl px-6 py-6 ">
+          <main className="flex flex-col min-h-screen mx-auto max-w-3xl px-6 py-6 ">
             {children}
-          </div>
+          </main>
           <Footer />
         </div>
       </body>
