@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 const navigation = [
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/nyhaalm/" },
+  { name: "Connect", href: "https://www.linkedin.com/in/nyhaalm/" },
 ];
 
 import "@theme-toggles/react/css/DarkInner.css";

@@ -54,7 +54,7 @@ const [shouldShowButton, setShouldShowButton] = useState(false);
           animate="visible"
           exit="exit"
           onClick={scrollToTop}
-          className="fixed right-4 bottom-4  text-white p-2 rounded"
+          className="fixed right-4 bottom-4 text-slate-900 dark:text-white p-2 rounded"
           style={{ zIndex: 100}}
         >
           <svg
