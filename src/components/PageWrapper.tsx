@@ -1,5 +1,7 @@
 'use client'
+import { useTheme } from "@/hooks/useDarkMode";
 import { AnimatePresence, motion } from "framer-motion";
+import useDarkMode from "use-dark-mode";
 
 
 type PageWrapperProps = {
@@ -9,6 +11,9 @@ type PageWrapperProps = {
 const PageWrapper = (
     { children }: PageWrapperProps
 ) => {
+
+    const { darkMode } = useTheme();
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -18,7 +23,7 @@ const PageWrapper = (
         transition={{
           type: "spring",
           stiffness: 260,
-          damping: 60,
+          damping: 20,
         }}
       >
         {children}
