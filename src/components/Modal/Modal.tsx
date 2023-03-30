@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Backdrop from "./Backdrop";
 
 type ModalProps = {
@@ -28,49 +28,48 @@ const dropIn = {
 };
 
 const newspaper = {
-    hidden: {
-      transform: "scale(0) rotate(720deg)",
-      opacity: 0,
-      transition: {
-        delay: 0.3,
-      },
+  hidden: {
+    transform: "scale(0) rotate(720deg)",
+    opacity: 0,
+    transition: {
+      delay: 0.3,
     },
-    visible: {
-      transform: " scale(1) rotate(0deg)",
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
+  },
+  visible: {
+    transform: " scale(1) rotate(0deg)",
+    opacity: 1,
+    transition: {
+      duration: 0.5,
     },
-    exit: {
-      transform: "scale(0) rotate(-720deg)",
-      opacity: 0,
-      transition: {
-        duration: 0.3,
-      },
+  },
+  exit: {
+    transform: "scale(0) rotate(-720deg)",
+    opacity: 0,
+    transition: {
+      duration: 0.3,
     },
-  };
-
-  const slideInFromLeft = {
-    hidden: {
-        x: "-100vw",
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            type: "spring",
-            stiffness: 120,
-        },
-    },
-    exit: {
-        x: "-100vw",
-        opacity: 0,
-    },
+  },
 };
 
-
+const slideInFromLeft: Variants = {
+  hidden: {
+    x: "-100vw",
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 20,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    opacity: 0,
+  },
+};
 
 const Modal = ({ handleClose, children }: ModalProps) => {
   return (
