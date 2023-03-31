@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 const navigation = [
-  { name: "Connect", href: "https://www.linkedin.com/in/nyhaalm/" },
+  { name: "Connect", href: "https://www.linkedin.com/in/nyhaalm/", newTab: true },
 ];
 
 import "@theme-toggles/react/css/DarkInner.css";
@@ -24,7 +24,8 @@ const Header = () => {
   usePreventScrolling(mobileMenuOpen);
 
   return (
-    <header className=" sticky top-0 z-50 my-8">
+    <header className="sticky top-0 z-50
+    ">
       <motion.div
         className="bg-green-600 h-2 mr-auto"
         style={{ scaleX: scaleX }}
@@ -78,6 +79,7 @@ const Header = () => {
             <ScrollProgressTitle key={item.name}>
               <Link
                 href={item.href}
+                target={item.newTab ? "_blank" : "_self"}
                 className="text-lg font-thin leading-6 text-gray-900 dark:text-white dark:hover:text-green-700 hover:text-green-700"
               >
                 {item.name}
@@ -100,6 +102,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
+                target={item.newTab ? "_blank" : "_self"}
                 className="cursor-pointer -mx-3 block py-2 px-3 text-6xl font-thin leading-7 text-gray-900 dark:text-white hover:text-green-700 dark:hover:text-green-700"
               >
                 {item.name.toUpperCase()}

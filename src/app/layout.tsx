@@ -25,10 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen w-full overflow-x-hidden bg-slate-900 dark:bg-slate-900">
-        <div className="min-h-screen w-full overflow-x-hidden  bg-white dark:bg-slate-900">
+      <body className="bg-slate-900">
+        <div className="min-h-screen w-full overflow-x-clip bg-white dark:bg-slate-900">
           <Header />
-          <main className="flex flex-col min-h-screen mx-auto max-w-3xl px-6 py-6 ">
+          <main className="flex flex-col mx-auto max-w-3xl px-6 py-6 ">
             {children}
           </main>
           <Footer />
