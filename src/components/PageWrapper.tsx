@@ -26,6 +26,7 @@ const PageWrapper = (
           stiffness: 260,
           damping: 20,
         }}
+        className="w-full overflow-hidden mx-auto"
       >
       <ScrollToTopButton/>
         {children}

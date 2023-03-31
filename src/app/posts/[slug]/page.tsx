@@ -27,7 +27,7 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
   const post = getPostContent(slug);
   return (
     <PageWrapper>
-      <div className="">
+      <div className="w-full overflow-hidden">
         <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100 ">{post.data.title}</h1>
         <p className="text-gray-500">{post.data.date}</p>
         <article className="prose prose-slate dark:prose-invert  lg:prose-xl">

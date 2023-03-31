@@ -15,5 +15,5 @@ export default function Home() {
     );
   });
 
-  return  <PageWrapper><div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div></PageWrapper>;
+  return  <PageWrapper><div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div></PageWrapper>;
 }

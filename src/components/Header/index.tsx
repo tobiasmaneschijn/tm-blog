@@ -24,7 +24,7 @@ const Header = () => {
   usePreventScrolling(mobileMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50
+    <header className="sticky w-full top-0 z-50
     ">
       <motion.div
         className="bg-green-600 h-2 mr-auto"

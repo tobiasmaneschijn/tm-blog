@@ -1,28 +1,28 @@
 "use client";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import React, { useState } from "react";
 const treshold = 400;
 
-
 const ScrollToTopButton = () => {
-const [shouldShowButton, setShouldShowButton] = useState(false);
+  const [shouldShowButton, setShouldShowButton] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const { scrollY } = useScroll();
 
-    scrollY.on("change", (y) => {
-        if (y > treshold) {
-            if (!shouldShowButton) setShouldShowButton(true);
-        } else {
-            if (shouldShowButton) setShouldShowButton(false);
-        }
-
-    });
-            
-
-
+  scrollY.on("change", (y) => {
+    if (y > treshold) {
+      if (!shouldShowButton) setShouldShowButton(true);
+    } else {
+      if (shouldShowButton) setShouldShowButton(false);
+    }
+  });
 
   const variants = {
     hidden: {
@@ -55,7 +55,7 @@ const [shouldShowButton, setShouldShowButton] = useState(false);
           exit="exit"
           onClick={scrollToTop}
           className="fixed right-4 bottom-4 text-slate-900 dark:text-white p-2 rounded"
-          style={{ zIndex: 100}}
+          style={{ zIndex: 100 }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="   px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 mt-auto">
+      <div className="w-full px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 mt-auto">
         <div className="flex  justify-center mt-8 gap-6">
           <a
             href="https://www.linkedin.com/in/nyhaalm/"
