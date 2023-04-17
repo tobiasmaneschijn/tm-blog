@@ -126,6 +126,9 @@ function usePreventScrolling(mobileMenuOpen: boolean) {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
       document.body.addEventListener("wheel", handleWheel, { passive: false });
+      // disable zoom
+      document.addEventListener("touchmove", handleWheel, { passive: false });
+
     } else {
       document.body.style.overflow = "auto";
       document.body.removeEventListener("wheel", handleWheel);
